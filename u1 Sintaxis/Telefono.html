@@ -1,0 +1,37 @@
+<html>
+<head><title></title></head>
+<body>
+    <script>
+    function telefono(pre,num){
+        var pre;
+        var num;
+        var salida;
+        
+        
+        if (pre == 900 || pre==800 ){
+            salida = "El telefono es gratuito";
+            
+        }else if (pre>=91 & pre <=98){
+           
+            salida = "El telefono es fijo";
+        }else{
+            salida= "El telefono es de pago";
+        }
+
+        
+        
+        
+        return alert(salida);
+    }
+        
+        telefono(902,6689087);
+        telefono(900,6689087);
+        telefono(800,6689087);
+        telefono(94,6689087);
+        telefono(92,6689087);
+        telefono(98,6689087);
+        telefono(99,6689087);
+        
+    </script>
+</body>
+</html>
