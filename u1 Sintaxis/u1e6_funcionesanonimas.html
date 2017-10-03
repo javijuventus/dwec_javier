@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+   <script>
+    var b=2;
+    var a=3;
+    var l1=5;
+    var l2=3;
+    var l3=4;
+    var r=6;
+    var resultado;
+       
+       /*FUNCIONES ANONIMAS*/
+       
+var areaTriangulo=function (a,b){return (a*b)/2;}
+alert(areaTriangulo(a,b));
+var perimetroTrianguloEquilatero=function (l1){return l1*3;}
+alert(perimetroTrianguloEquilatero(l1));
+var perimetroTrianguloIsosceles=function (l1, l2){return 2*l1+l2;}
+alert(perimetroTrianguloIsosceles(l1,l2));
+var perimetroTrianguloEscaleno=function (l1,l2,l3){return l1+l2+l3;}
+alert(perimetroTrianguloEscaleno(l1,l2,l3));
+/*CONSTRUCTOR FUNCION*/
+
+
+var areaCuadrado= new Function ("l1","return Math.pow(l1,2);");
+alert(areaCuadrado(l1));
+var perimetroCuadrado= new Function ("l1","return 4*l1;");
+alert(perimetroCuadrado(l1));
+var areaRectangulo= new Function ("l1","l2","return l1*l2;");
+alert(areaRectangulo(l1,l2));
+       
+       /*FUNCIONES ANONIMAS AUTOINVOCADAS*/
+       
+/* areaCirculo*/       
+(function (r){return Math.PI*Math.pow(r,2);}());      
+       
+       /*longitudCircurferencia*/
+(function (r){ return 2*Math.PI*r;}());
+
+
+
+</script>
+</body>
+
+</html>
