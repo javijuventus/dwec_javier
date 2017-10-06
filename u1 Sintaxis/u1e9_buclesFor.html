@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+
+</head>
+
+<body>
+	<script>
+		document.write("Horarios");
+		var h, m;
+		for (h = 8; h <= 20; h++) {
+
+
+
+
+			for (m = 0; m < 60; m += 15) {
+
+
+
+				if (h == 20 & m > 30) {
+
+					break;
+				}
+
+
+
+
+
+				if (h < 10) {
+					if (m < 1) {
+						document.write("<p>" + h + ":0" + m + "</p>");
+					} else {
+						document.write("<p>" + h + ":" + m + "</p>");
+
+					}
+
+
+				} else {
+					if (m < 1) {
+						document.write("<p>" + h + ":0" + m + "</p>");
+					} else {
+						document.write("<p>" + h + ":" + m + "</p>");
+
+					}
+
+				}
+
+
+
+
+
+			}
+
+
+
+		}
+
+	</script>
+</body>
+
+</html>
