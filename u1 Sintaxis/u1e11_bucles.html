@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title></title>
+				
+</head>
+
+<body>
+	<script>
+	
+		var res1= "Adolfo Suarez";
+		var res2="Adolfo";
+		var res3="Suarez";
+		
+		y=prompt("Quien fue el primer presidente de la democracia española");
+		
+		while ( y != res1 || y != res2 ){
+			
+			
+			if ( y == res1){
+				alert("Respuesta correcta");
+				break;
+				
+			}else if(y == res2){
+				t=prompt("Introduce el apellido");
+				
+				if(t==res3){
+				alert("Correcto");
+					
+					break;
+				}else{
+					alert("Incorrecto");
+					
+				}
+				
+				alert("Inténtelo de nuevo.");
+				
+			}else{
+				
+				alert("Error. Intentelo de nuevo.");
+				
+				break;
+			}
+			
+			
+			
+		}
+	
+	
+	</script>
+</body>
+</html>
