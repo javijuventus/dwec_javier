@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Repeticiones. Bucle for in</title>
+</head>
+
+<body>
+  <script>
+  function misNumeros() {
+        var i;
+        for (i = 0; i < 101; i++) {
+
+          if (i % 3==0){
+            continue;
+          }
+
+         document.write("<p>"+i+"</p>");
+
+        }
+    }
+
+    misNumeros();
+
+  function meses(){
+
+
+
+  var meses= ["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+var k;
+bucle:
+for (k=0;k<12;k++){
+
+  if (meses[k]=="Junio" || meses[k]=="Julio" || meses[k]=="Agosto"){
+
+    continue bucle;
+  }
+
+alert (meses[k]);
+
+}
+
+
+
+  }
+
+  meses();
+
+
+  </script>
+</body>
+
+</html>
