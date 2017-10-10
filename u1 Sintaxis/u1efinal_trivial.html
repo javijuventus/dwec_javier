@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+
+</head>
+
+<body>
+	<script>
+
+
+		var y;
+		var res;
+		var aciertos = 0;
+		var fallos = 0;
+
+		var opc;
+
+
+		while (aciertos < 5 || fallos < 4) {
+
+			alert("Elije una categoria");
+			alert("1.-Geografia");
+			alert("2.-Arte");
+			alert("3.-Deportes");
+			alert("4.-Espectaculos");
+			alert("5.-Historia");
+			alert("5.-Ciencias");
+
+
+
+			var contestada = false;
+			var contesGeo=false;
+			var contesArte=false;
+			var contesDepor=false;
+			var contesEspect=false;
+			var contesHisto=false;
+			var contesCiencias=false;
+
+
+			opc=prompt("Escoge la categoria");
+
+			switch (opc) {
+
+
+				case 1:
+
+
+
+					if (contesGeo == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+						y = prompt("¿Cuantos continentes existen segun el modelo tradicional?");
+						if (y == 5) {
+
+							aciertos++;
+						} else {
+							fallos++;
+						}
+						alert("aciertos: "+aciertos);
+						alert("fallos: "+fallos);
+						contesGeo = true;
+						break;
+
+
+					}
+
+
+
+
+
+				case 2:
+
+
+					if (contesArte == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+
+						y = prompt("¿Quién escribió La Odisea?");
+						if (y == "Homero") {
+							aciertos++;
+						} else {
+							fallos++;
+						}
+						alert("aciertos: "+aciertos);
+						alert("fallos: "+fallos);
+						contesArte = true;
+						break;
+
+					}
+
+
+
+				case 3:
+
+
+					if (contesDepor == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+						y = prompt("7. ¿ De dónde son originarios juegos olímpicos?");
+						if (y == "Olimpia") {
+							aciertos++;
+						} else {
+							fallos++;
+						}
+						contesDepor=true;
+						break;
+
+					}
+
+
+
+
+				case 4:
+
+
+
+					if (contesEspect== true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						y = prompt("¿Quién es el peor y recurrente enemigo de Batman?");
+						if (y == "Joker") {
+							aciertos++;
+						} else {
+							fallos++;
+						}
+						alert("aciertos: "+aciertos);
+						alert("fallos: "+fallos);
+						contesEspect= true;
+						break;
+					}
+
+				case 5:
+
+					if (contesHisto == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						y = prompt("¿En qué año comenzó la II Guerra Mundial?");
+						if (y == 1939) {
+							aciertos++;
+						} else {
+							fallos++;
+						}
+
+						alert("aciertos: "+aciertos);
+						alert("fallos: "+fallos);
+
+						contesHisto = true;
+						break;
+					}
+
+				case 6:
+
+
+					if (contesCiencias == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+						y = prompt("¿De qué se alimentan los koalas?");
+						if (y == "hierba") {
+							aciertos++;
+						} else {
+							fallos++;
+						}
+
+
+						contesCiencias = true;
+						break;
+
+					}
+
+			}
+		}
+
+
+
+	</script>
+</body>
+
+</html>
