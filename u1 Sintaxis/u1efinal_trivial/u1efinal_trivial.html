@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<script type="text/javascript" src="funciones.js"></script>
+</head>
+
+<body>
+	<script>
+		
+/**
+ *
+ * @author Javier Naranjo Alonso.
+ * @version 1.0
+ */
+	 
+		
+		var aciertos = 0;
+		var fallos = 0;
+		var opc;
+
+
+
+
+			var contesGeo = false;
+			var contesArte = false;
+			var contesDepor = false;
+			var contesEspect = false;
+			var contesHisto = false;
+			var contesCiencias = false;
+		
+		/*@description Bucle while que ejecuta todo el programa, únicamente terminará cuando se acierten 4 preguntas o cuando se fallen 3. */
+		
+		while (aciertos<4 && fallos < 3) {
+			
+
+			/*@description Pregunta la usuario la categoria a elegir*/
+			
+			opc = parseInt(prompt("Escoge la categoria:\n1.-Geografia\n2.-Arte\n3.-Deportes\n4.-Espectaculos\n5.-Historia\n6.-Ciencias"));
+			
+			/*@description Bucle switch en el que se recibe la respuesta a la pregunta anterior a traves de la variable opc, dirige al usuario a la categoria escogida*/
+
+			switch (opc) {
+				case 1:
+					if (contesGeo == true) {
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta("¿Cuantos continentes existen segun el modelo tradicional?", 5);
+
+
+
+						contesGeo = true;
+						break;
+
+
+					}
+
+
+				case 2:
+
+
+					if (contesArte == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta("¿Quién escribió La Odisea?", "homero");
+
+
+						contesArte = true;
+						break;
+
+					}
+
+
+
+				case 3:
+
+
+					if (contesDepor == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta(" ¿ De dónde son originarios juegos olímpicos?", "olimpia");
+
+						contesDepor = true;
+						break;
+
+					}
+
+
+
+
+				case 4:
+
+
+
+					if (contesEspect == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta("¿Quién es el peor y recurrente enemigo de Batman?", "joker");
+
+
+						contesEspect = true;
+						break;
+					}
+
+				case 5:
+
+					if (contesHisto == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta("¿En qué año comenzó la II Guerra Mundial?", 1939);
+
+
+						contesHisto = true;
+						break;
+					}
+
+				case 6:
+
+
+					if (contesCiencias == true) {
+
+						alert("Ya has elegido esta categoria antes, elige otra");
+
+						break;
+					} else {
+
+						pregunta("¿De qué se alimentan los koalas?", "hierba");
+
+						contesCiencias = true;
+						break;
+
+					}
+
+			}
+		}
+
+	</script>
+</body>
+
+</html>
