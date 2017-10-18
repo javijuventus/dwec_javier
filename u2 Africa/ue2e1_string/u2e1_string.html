@@ -14,9 +14,26 @@
        creaPersona();
         
     nombreCompleto = new String();
-        nombreCompleto = persona1.nombre+", "+persona1.apellido1+", "+persona1.apellido2;
-        
+        nombreCompleto = persona1.nombre+", "+persona1.apellido1+", "+persona1.apellido2;        
         alert("El tamaño de esta cadena es de: "+nombreCompleto.length);
+		
+		/*Cadena nombreCompleto en mayusculas*/
+		nombreCompleto= nombreCompleto.toLocaleUpperCase(); 
+		
+		
+		alert(nombreCompleto);
+		/* Cadena mostrada en cada linea*/ 
+		nombreCompleto = nombreCompleto+" "+persona1.anio;
+		
+		var nombreSeparado = nombreCompleto.split(" ");
+		
+		alert(nombreSeparado[0]+"\n"+nombreSeparado[1]+"\n"+nombreSeparado[2]+"\n"+nombreSeparado[3]);
+		
+		/* Cadena con la primera letra del nombre, el primer apellido entero m la inicial del segundo apellido y los ultimos numeros del año*/
+		
+		var nombreUsuario = nombreSeparado[0].charAt(0)+nombreSeparado[1]+nombreSeparado[2].charAt(0)+nombreSeparado[3].substring(2);
+		
+		alert(nombreUsuario);
 
     </script>
 
