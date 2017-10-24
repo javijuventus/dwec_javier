@@ -6,7 +6,17 @@ function crearVentana() {
 
 
     miVentana = window.open("", "Mi Ventana", "width= 500,height=500,resizable=no,scrollbars=no,toolbar=no");
-
+    
+   
+    
+    var texto = "<button onclick='opener.Rojo()'> Rojo </button>";
+    texto +="<button onclick='opener.Azul()'> Azul </button>";
+    texto +="<button onclick='opener.Verde()'> Verde </button>";
+    texto +="<button onclick='opener.Amarillo()'> Amarillo </button>";
+    texto +="<button onclick='opener.Morado()'> Morado </button>";
+    texto += "<button onclick='opener.Rosa()'> Rosa </button>";
+    
+    miVentana.document.write(texto);
    
 }
 
