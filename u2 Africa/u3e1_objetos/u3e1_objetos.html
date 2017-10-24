@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="funciones.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+
+<body>
+  
+    <script>
+        var nombre;
+        var edad;
+        var especialidad;
+        
+        
+        
+        var sandkill1 = {nombre:"Javier",edad:26,especialidad:"Javascript",
+                        
+                         nombreCompleto : function(){
+                return this.nombre + " " + this.edad + " " + this.especialidad;}
+                        
+                        };
+        
+        
+        alert(sandkill1.nombreCompleto());
+        
+        var sandkill2 = new Object();
+        sandkill2.nombre= "Pepito";
+        sandkill2.edad = "40";
+        sandkill2.especialidad = "Java";
+        sandkill2.nombreCompleto = sandkill2.nombre+ " " + sandkill2.edad + " " + sandkill2.especialidad;
+        
+        alert(sandkill2.nombreCompleto);
+        
+        
+        
+
+        
+
+        
+   
+        var sandkill3 = new Sandkill("Jose",30,"Ingeniero");
+        
+        
+       // alert(sandkill3.nombreCompleto());
+
+     
+        
+            
+           
+        
+        sandkill1.nacionalidad = "Inglesa";
+        sandkill2.lenguajeFavorito= "Jamaicano";
+        delete sandkill3.especialidad;
+        
+        recorreObjetos(sandkill1);
+        recorreObjetos(sandkill2);
+        recorreObjetos(sandkill3);
+        
+        sandkill1.nombre="Gerbasio";
+        sandkill2.lenguajeFavorito="Esperanto";
+        sandkill3.edad=5000;
+        
+        recorreObjetos(sandkill1);
+        recorreObjetos(sandkill2);
+        recorreObjetos(sandkill3);
+
+    </script>
+    
+    
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="funciones.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+
+<body>
+
+    <script>
+        var nombre;
+        var edad;
+        var especialidad;
+        var comp = new Sandkill("pepe",2,1);
+
+
+
+        function Sandkill(nombre, edad, especialidad, comp) {
+
+            this.nombre = nombre;
+            this.edad = edad;
+            this.especialidad = especialidad;
+            this.comp = comp;
+
+            this.getNombre = function() {
+
+                return this.nombre;
+            }
+            this.getEdad = function() {
+
+                return this.edad;
+            }
+            this.getEspec = function() {
+
+                if (this.especialidad == 1) {
+                    return "Sistemas";
+
+                } else if (this.especialidad == 2) {
+                    return "Web";
+
+                } else if (this.especialidad == 3) {
+
+                    return "Multiplataforma";
+                }
+                return this.especialidad;
+            }
+            
+            this.mostrar = function(){
+                
+                return this.getNombre()+" "+this.getEdad()+" "+this.getEspec()+" "+this.getNomComp();
+
+                
+            }
+            this.getComp = function() {
+
+                
+                return this.Comp;
+
+
+            }
+            this.getNomComp = function() {
+
+                
+
+                return comp.getNombre();
+
+
+            }
+
+            this.setNombre = function(nombre) {
+
+                this.nombre = nombre;
+            }
+            this.setEdad = function(edad) {
+
+                this.edad = edad;
+            }
+            this.setEspecialidad = function(n) {
+
+                this.especialidad = n;
+            }
+
+            this.setEspecialidadNombre = function(s) {
+
+                if (s == "Sistemas") {
+
+                    this.especialidad = 1;
+
+
+
+                } else if (s == "Web") {
+
+                    this.especialidad = 2;
+
+                } else if (s == "Multiplataforma") {
+
+                    this.especialidad = 3;
+
+                }
+            }
+
+            this.setComp = function(comp) {
+
+                this.comp = comp;
+            }
+            
+            
+
+
+
+        }
+
+
+
+
+
+        var sandkill3 = new Sandkill("Juan", 25, 2, null);
+        alert(sandkill3.getEspec());
+        sandkill3.setEspecialidad(3);
+        sandkill3.setEspecialidadNombre("Sistemas");
+        alert(sandkill3.getEspec());
+        
+        var sandkill4 = new Sandkill("pepe", 20, 3, sandkill3);
+        alert(sandkill4.getNombre());
+        alert(sandkill4.getNomComp());
+        alert(sandkill3.getEdad());
+        
+        alert(sandkill4.mostrar());
+        
+
+    </script>
+
+
+
+</body>
+
+</html>
